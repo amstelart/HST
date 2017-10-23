@@ -5,7 +5,7 @@
 $gray-lighter:                hsl(0, 0%, 80%) !default;
 $border-color:                hsl(0, 0%, 60%) !default;
 
-$text-color--muted:           hsl(0, 0%, 50%) !default;
+$text-color--muted:           #c0c0c0;
 
 $line-height:                 1.375em !default;
 
@@ -78,10 +78,10 @@ $border-radius:               3px !default;
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+      $textarea-height: ($line-height * 11) + ($field-padding-vertical * 11);
 
       height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
+      min-height: calc(#{$textarea-height} + 22px);
       resize: vertical;
     }
   }

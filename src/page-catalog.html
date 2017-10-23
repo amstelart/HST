@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <!-- <main class="page__main" role="main">
+        <div class="page__container">
+
+        </div>
+
+      </main> -->
+
+      <section class="main-blocks">
+        <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
+        <div class="layout">
+          <div class="layout__l-col">
+            <div class="col-wrap">
+              <nav class="c-menu">
+                <ul class="c-menu__list">
+                  <li class="c-menu__item c-menu__item--active">
+                    <a href="#" class="c-menu__link">Суши</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Сашими</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Роллы</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Сеты</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Рис</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Гункан</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Сашими</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Горячие закуски</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Салаты</a>
+                  </li>
+                  <li class="c-menu__item">
+                    <a href="#" class="c-menu__link">Супы</a>
+                  </li>
+
+                </ul>
+              </nav>
+              <div class="action">
+                <div class="action__header">
+                  <h3 class="action__header-title">Акция</h3>
+                </div>
+                <div class="action__body">
+                  <div class="action__card">
+                    <h2 class="action__card-name">Абокадо</h2>
+                    <div class="action__card-image">
+                      <img src="img/action-card-image.jpg" alt="">
+                    </div>
+                    <div class="action__card-buy">
+                      <span class="price price--old">251<span class="b-rub">&#8381;</span></span><span class="price price--red">50<span class="b-rub">&#8381;</span></span>
+                      <button class="btn btn--main">В корзину</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="action__footer">
+                  <div class="action__counter">
+                    <p class="action__counter-caption">До окончания акции</p>
+                    <div class="action__counter-count">
+                      <span>25</span>:<span>11</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__main">
+            <div class="filter">
+              <div class="tags">
+                <a href="#" class="tags__item">Микс(горячие + холодные)<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">Новинки<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">Суперсеты<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">Для больших компаний<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">На 3-4 персоны<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">Суперсеты<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">Для больших компаний<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">На 3-4 персоны<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item tags__item--active">Новинки<span class="close" aria-label="Закрыть"><span></span></span></a>
+                <a href="#" class="tags__item">Микс(горячие + холодные)<span class="close" aria-label="Закрыть"><span></span></span></a>
+              </div>
+            </div>
+            <div class="catalog">
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p><span>Роллы:</span> с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p><span>Суши:</span> с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-card">
+                <div class="c-card__body">
+                  <div class="c-card__header">
+                    <h4 class="c-card__name">Суши</h4>
+                    <span class="c-card__weight">910 гр</span>
+                  </div>
+                  <div class="c-card__image">
+                    <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                  </div>
+                  <div class="c-card__buy">
+                    <div class="c-card__price">
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                    <div class="c-card__get">
+                      <button class="btn btn--main btn-get">В корзину</button>
+                    </div>
+                    <div class="c-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>1</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card__caption">
+                    <div class="c-card__caption-text">
+                      <p>Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                      <p>Суши: с лососем, с кальмаром,
+                        с тунцом, с окунем, с копчёным
+                        угрём, с креветкой, с лакедрой,
+                        с осьминогом</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="layout__fw">
+            <div class="partners">
+              <h3 class="partners__title">Нащи партнёры</h3>
+              <div class="owl-carousel partners__carousel" id="partners-carousel">
+                <div class="partners__carousel-item">
+                  <img src="img/partners-demo-img-01.jpg" width="230" height="110" alt="">
+                </div>
+                <div class="partners__carousel-item">
+                  <img src="img/partners-demo-img-02.jpg" width="230" height="110" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="page__footer-wrap">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока sauce, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sauce {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 60px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__cards {
+    @include row;
+    .s-card {
+      @include make-col(2);
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока bascet, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket {
+
+  $block-name:                &; // #{$block-name}__element
+  border: 1px solid #c5c5c5;
+  padding: 15px 20px;
+  display: flex;
+  min-width: 160px;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+
+  span {
+    white-space: nowrap;
+  }
+  .icon {
+    margin-left: 15px;
+  }
+
+  &--active {
+    .icon {
+      fill: $color-main;
+    }
+  }
+
+}

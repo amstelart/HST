@@ -4,29 +4,145 @@
 <head>
   <meta charset="utf-8">
   <title>NTH start project</title>
-  <meta name="description" content="">
-  @@include('_include/page_head.html')
+  <meta name="description" content=""> @@include('_include/page_head.html')
 </head>
 
 <body>
 
-  <div class="page__inner">
+  <div class="page__inner" id="page">
+
+    <nav id="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><span>About us</span>
+          <ul>
+            <li><a href="#about/history">History</a></li>
+            <li><span>The team</span>
+              <ul>
+                <li><a href="#about/team/management">Management</a></li>
+                <li><a href="#about/team/sales">Sales</a></li>
+                <li><a href="#about/team/development">Development</a></li>
+              </ul>
+            </li>
+            <li><a href="#about/address">Our address</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <div class="page__content">
-
       @@include('blocks/page-header/page-header.html')
 
-      <main role="main">
+      <div class="main-slider-wrap">
+        <div class="owl-carousel main-slider" id="main-slider">
+          <img src="img/slider-demo-image.jpg" alt="">
+          <img src="img/slider-demo-image.jpg" alt="">
+          <img src="img/slider-demo-image.jpg" alt="">
+        </div>
+      </div>
 
-        <h1>NTH start project</h1>
-
-        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
-
-      </main>
+      <section class="main-blocks">
+        <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div>
+        <div class="layout">
+          <div class="layout__main">
+            <div class="main-catalog">
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-01.jpg);">
+                  <h4 class="main-catalog__card-name">Суши</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-02.jpg);">
+                  <h4 class="main-catalog__card-name">Роллы</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-03.jpg);">
+                  <h4 class="main-catalog__card-name">Сеты</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-04.jpg);">
+                  <h4 class="main-catalog__card-name">Рис</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-05.jpg);">
+                  <h4 class="main-catalog__card-name">Гункан</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-06.jpg);">
+                  <h4 class="main-catalog__card-name">Сашими</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-07.jpg);">
+                  <h4 class="main-catalog__card-name">Горячие закуски</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-08.jpg);">
+                  <h4 class="main-catalog__card-name">Салаты</h4>
+                </a>
+              </div>
+              <div class="main-catalog__card">
+                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-09.jpg);">
+                  <h4 class="main-catalog__card-name">Супы</h4>
+                </a>
+              </div>
+            </div>
+            <div class="partners">
+              <h3 class="partners__title">Нащи партнёры</h3>
+              <div class="owl-carousel partners__carousel" id="partners-carousel">
+                <div class="partners__carousel-item">
+                  <img src="img/partners-demo-img-01.jpg" width="230" height="110" alt="">
+                </div>
+                <div class="partners__carousel-item">
+                  <img src="img/partners-demo-img-02.jpg" width="230" height="110" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__r-col">
+            <div class="banner">
+              <a href="#" class="banner__link">
+                <img src="img/banner-demo.jpg" alt="">
+              </a>
+            </div>
+            <div class="action">
+              <div class="action__header">
+                <h3 class="action__header-title">Акция</h3>
+              </div>
+              <div class="action__body">
+                <div class="action__card">
+                  <h2 class="action__card-name">Абокадо</h2>
+                  <div class="action__card-image">
+                    <img src="img/action-card-image.jpg" alt="">
+                  </div>
+                  <div class="action__card-buy">
+                    <span class="price price--old">251<span class="b-rub">&#8381;</span></span><span class="price price--red">50<span class="b-rub">&#8381;</span></span>
+                    <button class="btn btn--main">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="action__footer">
+                <div class="action__counter">
+                  <p class="action__counter-caption">До окончания акции</p>
+                  <div class="action__counter-count">
+                    <span>25</span>:<span>11</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
 
-    <div class="page__footer-wrapper">
+    <div class="page__footer-wrap">
       @@include('blocks/page-footer/page-footer.html')
     </div>
 
@@ -34,4 +150,5 @@
 
   @@include('_include/page_bottom.html')
 </body>
+
 </html>

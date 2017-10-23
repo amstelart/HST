@@ -1,0 +1,75 @@
+// В этом файле должны быть стили для БЭМ-блока payment, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.payment {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0 100px 0 100px;
+  padding: 0 15px 40px 15px;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 15px;
+  }
+  &__row-separate {
+    height: 1px;
+    background: #ccc;
+  }
+
+  &__item {
+    padding: 0 60px;
+  }
+
+  &__separate {
+    width: 1px;
+    height: 80px;
+    background: #c0c0c0;
+  }
+
+  &__to-pay {
+    border: 2px solid #000;
+    border-radius: 3px;
+    padding: 1em 3.5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__to-pay-title {
+    font-size: 16px;
+  }
+  &__bonus {}
+  &__bonus-score {
+    font-size: 16px;
+    margin: 10px 0;
+    span {
+      font-weight: 500;
+    }
+  }
+
+}
+
+.bonus-form {
+  display: flex;
+  align-items: center;
+  &__field {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 20px;
+    .field-text__input {
+      width: 60px;
+      text-align: center;
+    }
+  }
+}

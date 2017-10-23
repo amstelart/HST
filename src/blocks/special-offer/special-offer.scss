@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока special-offer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.special-offer {
+
+  $block-name:                &; // #{$block-name}__element
+  background: #ebebeb;
+  border: 2px solid $color-main;
+  padding: 30px 100px;
+  margin: 0 20px 30px 20px;
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+  &__cards {
+    @include row;
+  }
+
+  .c-card {
+    @include make-col(4);
+  }
+
+}
