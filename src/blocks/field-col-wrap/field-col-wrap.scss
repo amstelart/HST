@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока field-col-wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-col-wrap {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @media (min-width: $screen-lg) {
+    flex-direction: row;
+  }
+
+  &__item {
+    @media (min-width: $screen-lg) {
+      width: 47%;
+    }
+  }
+
+}

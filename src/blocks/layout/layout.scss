@@ -9,6 +9,15 @@
   padding: 20px 10px;
   &__fw {
     @include make-col(12);
+    &--page-form {
+      .page__title {
+        text-align: center;
+      }
+      .page__title-main {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
   }
   &__main {
     @include make-col(12);

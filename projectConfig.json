@@ -84,7 +84,11 @@
     "order-checkout": [],
     "payment": [],
     "terms-of-delivery": [],
-    "delivery-form": []
+    "delivery-form": [],
+    "authorization": [],
+    "field-links": [],
+    "field-col-wrap": [],
+    "account": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

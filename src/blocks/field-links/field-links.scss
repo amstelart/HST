@@ -1,0 +1,15 @@
+// В этом файле должны быть стили для БЭМ-блока field-links, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-links {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    
+  }
+
+}

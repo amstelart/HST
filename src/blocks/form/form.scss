@@ -37,5 +37,22 @@ $line-height:                 1.375em !default;
     font-weight: 700;
     line-height: $line-height;
     color: currentColor;
+
   }
+
+  &--authorization {
+    .field-text__input {
+      border-color: #000;
+    }
+    .field-text {
+      margin-bottom: 15px;
+    }
+    .field-actions {
+      margin-top: 0;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+
 }

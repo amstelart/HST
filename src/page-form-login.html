@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <!-- <main class="page__main" role="main">
+        <div class="page__container">
+
+        </div>
+
+      </main> -->
+
+      <section class="main-blocks main-blocks--wb">
+        <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
+        <div class="layout">
+          <div class="layout__fw layout__fw--page-form">
+            <div class="page__title">
+              <h1 class="page__title-main">Вход</h1>
+            </div>
+            <div class="authorization">
+              <form action="" class="form--authorization">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Телефон или E-mail">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Пароль">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button type="submit" class="btn btn--main">Войти</button>
+                </div>
+                <div class="field-links">
+                  <a class="field-links__item" href="#">Забыли пароль?</a>
+                  <a class="field-links__item" href="#">Регистрация</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="page__footer-wrap">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

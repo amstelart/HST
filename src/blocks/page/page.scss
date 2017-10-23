@@ -41,6 +41,17 @@
     height: 1px;
     background: #cdcdcd;
   }
+  &__title {
+    border-bottom: 1px solid #ccc;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  &__title-main,
+  &__title-caption {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0;
+  }
 }
 
 *,

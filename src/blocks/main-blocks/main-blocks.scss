@@ -10,6 +10,10 @@
   background: #e7e7e7;
   position: relative;
 
+  @media (min-width: $screen-lg) {
+    min-height: 50vh;
+  }
+
   .bl-promo {
     display: none;
     position: absolute;
@@ -23,5 +27,9 @@
     @media (min-width: $screen-xxl) {
       display: block;
     }
+  }
+
+  &--wb {
+    background: #fff;
   }
 }
