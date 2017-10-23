@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header-wrap" role="banner">
+        <div class="page__container">
+          <div class="page-header">
+            <a class="burger main-nav-toggler" href="#menu"><span></span></a>
+            <div class="page-header__logo">
+              <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="logo">
+              </a>
+            </div>
+            <div class="page-header__info">
+              <div class="header-info">
+                <p class="header-info__phone">
+                  <svg width="22" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-phone"></use></svg>
+                  <span>22-22-12</span>
+                </p>
+                <p class="header-info__text">Вы можете сделать заказ по телефону</p>
+              </div>
+            </div>
+            <div class="page-header__auth page-header__auth--logged">
+              <!-- <div class="page-header__auth-el">Вход</div>
+              <div class="page-header__auth-divider"></div>
+              <div class="page-header__auth-el">Регистраци</div> -->
+              <div class="page-header__auth-el">Здравствуйте, <span>Николай!</span></div>
+              <div class="page-header__auth-divider"></div>
+              <div class="page-header__auth-el"><a href="#">Личный кабинет</a></div>
+            </div>
+            <div class="page-header__basket">
+              <a href="page-order.html" class="basket basket--active">
+                <span>2 поз. / 1580 р.</span>
+                <svg class="icon" width="30" height="27"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"></use></svg>
+              </a>
+            </div>
+            <div class="page-header__social">
+              <div class="social">
+                <a class="social__item social__item--vk" href="#"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-social-vk"></use></svg></a>
+                <a class="social__item social__item--insta" href="#"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-social-insta"></use></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__separate"></div>
+        <nav class="main-nav" role="navigation">
+          <div class="page__container">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Японское Меню
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Бизнес-ланч
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Фитнес-меню
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Пицца
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  О нас
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Фотоальбом
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Заказ и доставка
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Отзывы
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Банкетное меню
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+      <!-- <main class="page__main" role="main">
+        <div class="page__container">
+
+        </div>
+
+      </main> -->
+
+      <section class="main-blocks" style="background: #fff;">
+        <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
+        <div class="layout">
+          <div class="layout__fw">
+            <div class="page__title">
+              <h1 class="page__title-main">Корзина</h1>
+              <p class="page__title-caption">Всего через несколько шагов ваш заказ будет оформлен</p>
+              <div class="order">
+                <div class="order__item">
+                  <div class="b-card">
+                    <div class="b-card__info">
+                      <div class="b-card__img" style="background-image: url(img/c-card-image-01.jpg);">
+                        <!-- <img src="img/c-card-image-01.jpg" width="300" height="200" alt=""> -->
+                      </div>
+                      <div class="b-card__name">
+                        <div class="b-card__name-title">Таке</div>
+                        <div class="b-card__name-caption">
+                          Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.) Суши: с лососем,
+                          с кальмаром, с тунцом, с окунем, с копчёным угрём, с креветкой, с лакедрой,
+                          с осьминогом
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-card__change">
+                      <div class="b-card__inc">
+                        <div class="elements-icr-block">
+                          <div class="incr">
+                            <div class="incr__minus incr__nav">
+                              <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                              </svg>
+                            </div>
+                            <div class="incr__val">
+                              <span>1</span>
+                              <div class="incr__val-coner"></div>
+                            </div>
+                            <div class="incr__plus incr__nav">
+                              <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="b-card__price">
+                        <span class="price">1600<span class="b-rub">₽</span></span>
+                      </div>
+                      <div class="b-card__delete">
+                        <span class="close" aria-label="Закрыть"><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order__item">
+                  <div class="b-card">
+                    <div class="b-card__info">
+                      <div class="b-card__img" style="background-image: url(img/c-card-image-01.jpg);">
+                        <!-- <img src="img/c-card-image-01.jpg" width="300" height="200" alt=""> -->
+                      </div>
+                      <div class="b-card__name">
+                        <div class="b-card__name-title">Таке</div>
+                        <div class="b-card__name-caption">
+                          Роллы: с лососем, с тунцом (сяке маки mini, тека маки mini.) Суши: с лососем,
+                          с кальмаром, с тунцом, с окунем, с копчёным угрём, с креветкой, с лакедрой,
+                          с осьминогом
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-card__change">
+                      <div class="b-card__inc">
+                        <div class="elements-icr-block">
+                          <div class="incr">
+                            <div class="incr__minus incr__nav">
+                              <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                              </svg>
+                            </div>
+                            <div class="incr__val">
+                              <span>1</span>
+                              <div class="incr__val-coner"></div>
+                            </div>
+                            <div class="incr__plus incr__nav">
+                              <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="b-card__price">
+                        <span class="price">1600<span class="b-rub">₽</span></span>
+                      </div>
+                      <div class="b-card__delete">
+                        <span class="close" aria-label="Закрыть"><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order__details">
+                  <div class="order__details-person">
+                    Количество персон
+                    <div class="elements-icr-block">
+                      <div class="incr">
+                        <div class="incr__minus incr__nav">
+                          <svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                          </svg>
+                        </div>
+                        <div class="incr__val">
+                          <span>1</span>
+                          <div class="incr__val-coner"></div>
+                        </div>
+                        <div class="incr__plus incr__nav">
+                          <svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__details-bonus">
+                    Будет начислено бонусов: <span class="">150</span>
+                  </div>
+                  <div class="order__details-cost">
+                    Общая сумма заказа: <span class="price">1600<span class="b-rub">₽</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="special-offer">
+                <h3 class="special-offer__title">Специальное предложение</h3>
+                <div class="special-offer__cards">
+                  <div class="c-card">
+                    <div class="c-card__body">
+                      <div class="c-card__header">
+                        <h4 class="c-card__name">Суши</h4>
+                        <span class="c-card__weight">910 гр</span>
+                      </div>
+                      <div class="c-card__image">
+                        <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                      </div>
+                      <div class="c-card__buy">
+                        <div class="c-card__price">
+                          <span class="price">1600<span class="b-rub">₽</span></span>
+                        </div>
+                        <div class="c-card__get">
+                          <button class="btn btn--main btn-get">В корзину</button>
+                        </div>
+                        <div class="c-card__incr">
+                          <div class="elements-icr-block">
+                            <div class="incr">
+                              <div class="incr__minus incr__nav">
+                                <svg class="icon">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                                </svg>
+                              </div>
+                              <div class="incr__val">
+                                <span>1</span>
+                                <div class="incr__val-coner"></div>
+                              </div>
+                              <div class="incr__plus incr__nav">
+                                <svg class="icon">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-card__caption">
+                        <div class="c-card__caption-text">
+                          <p><span>Роллы:</span> с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                          <p><span>Суши:</span> с лососем, с кальмаром,
+                            с тунцом, с окунем, с копчёным
+                            угрём, с креветкой, с лакедрой,
+                            с осьминогом</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card">
+                    <div class="c-card__body">
+                      <div class="c-card__header">
+                        <h4 class="c-card__name">Суши</h4>
+                        <span class="c-card__weight">910 гр</span>
+                      </div>
+                      <div class="c-card__image">
+                        <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                      </div>
+                      <div class="c-card__buy">
+                        <div class="c-card__price">
+                          <span class="price">1600<span class="b-rub">₽</span></span>
+                        </div>
+                        <div class="c-card__get">
+                          <button class="btn btn--main btn-get">В корзину</button>
+                        </div>
+                        <div class="c-card__incr">
+                          <div class="elements-icr-block">
+                            <div class="incr">
+                              <div class="incr__minus incr__nav">
+                                <svg class="icon">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                                </svg>
+                              </div>
+                              <div class="incr__val">
+                                <span>1</span>
+                                <div class="incr__val-coner"></div>
+                              </div>
+                              <div class="incr__plus incr__nav">
+                                <svg class="icon">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-card__caption">
+                        <div class="c-card__caption-text">
+                          <p><span>Роллы:</span> с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                          <p><span>Суши:</span> с лососем, с кальмаром,
+                            с тунцом, с окунем, с копчёным
+                            угрём, с креветкой, с лакедрой,
+                            с осьминогом</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-card">
+                    <div class="c-card__body">
+                      <div class="c-card__header">
+                        <h4 class="c-card__name">Суши</h4>
+                        <span class="c-card__weight">910 гр</span>
+                      </div>
+                      <div class="c-card__image">
+                        <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                      </div>
+                      <div class="c-card__buy">
+                        <div class="c-card__price">
+                          <span class="price">1600<span class="b-rub">₽</span></span>
+                        </div>
+                        <div class="c-card__get">
+                          <button class="btn btn--main btn-get">В корзину</button>
+                        </div>
+                        <div class="c-card__incr">
+                          <div class="elements-icr-block">
+                            <div class="incr">
+                              <div class="incr__minus incr__nav">
+                                <svg class="icon">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                                </svg>
+                              </div>
+                              <div class="incr__val">
+                                <span>1</span>
+                                <div class="incr__val-coner"></div>
+                              </div>
+                              <div class="incr__plus incr__nav">
+                                <svg class="icon">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-card__caption">
+                        <div class="c-card__caption-text">
+                          <p><span>Роллы:</span> с лососем, с тунцом (сяке маки mini, тека маки mini.)</p>
+                          <p><span>Суши:</span> с лососем, с кальмаром,
+                            с тунцом, с окунем, с копчёным
+                            угрём, с креветкой, с лакедрой,
+                            с осьминогом</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sauce">
+                <div class="sauce__title">Приправы и соусы</div>
+                <div class="sauce__cards">
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-card">
+                    <div class="s-card__image">
+                      <img src="img/c-card-image-01.jpg" width="300" height="200" alt="">
+                    </div>
+                    <div class="s-card__name">Васаби</div>
+                    <div class="s-card__incr">
+                      <div class="elements-icr-block">
+                        <div class="incr">
+                          <div class="incr__minus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#minus"></use>
+                            </svg>
+                          </div>
+                          <div class="incr__val">
+                            <span>0</span>
+                            <div class="incr__val-coner"></div>
+                          </div>
+                          <div class="incr__plus incr__nav">
+                            <svg class="icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-details">
+                <div class="order-details__title">Контактная информация</div>
+                <form action="" class="delivery-form">
+                  <div class="delivery-form__row">
+                    <div class="delivery-form__col">
+                      <div class="delivery-form__item delivery-form__item--active">
+                        <div class="delivery-form__item-var">Доставка курьером
+                          <svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-chek"></use>
+                          </svg>
+                        </div>
+                        <div class="delivery-form__wrap">
+                          <div class="delivery-form__group">
+                            <div class="delivery-form__group-title">Данные доставки</div>
+                            <label class="field-select">
+                              <div class="field-select__name">Новый адрес</div>
+                              <div class="field-select__select-wrap">
+                                <select class="field-select__select">
+                                  <optgroup label="Группа">
+                                    <option>Значение 1</option>
+                                    <option>Значение 2</option>
+                                    <option>Значение 3</option>
+                                  </optgroup>
+                                  <option>Значение 10</option>
+                                </select>
+                                <!-- <small class="field-select__help-text">Обёртка — <code>&lt;label&gt;</code>.</small> -->
+                              </div>
+                            </label>
+                            <label class="field-text">
+                              <!-- <span class="field-text__name">Улица</span> -->
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" placeholder="Улица">
+                                <!-- <span class="field-text__help-text">Пояснение</span> -->
+                              </span>
+                            </label>
+                            <label class="field-text">
+                              <!-- <span class="field-text__name">Дом</span> -->
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" placeholder="Дом">
+                                <!-- <span class="field-text__help-text">Пояснение</span> -->
+                              </span>
+                            </label>
+                            <label class="field-text">
+                              <!-- <span class="field-text__name">Кв/офис</span> -->
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" placeholder="Кв/офис">
+                                <!-- <span class="field-text__help-text">Пояснение</span> -->
+                              </span>
+                            </label>
+                          </div>
+                          <div class="delivery-form__group">
+                            <div class="delivery-form__group-title">Время доставки</div>
+                            <div class="field-radio">
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio">
+                                  <span class="field-radio__name-text">На ближайшее время</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio" checked>
+                                  <span class="field-radio__name-text">Указать время</span>
+                                </label>
+                                <div class="field-radio__help-text-wrap">
+                                  <div class="field-radio__help-text">Пояснение.</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-form__col">
+                      <div class="delivery-form__item">
+                        <div class="delivery-form__item-var">Заберу заказ сам
+                          <svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-chek"></use>
+                          </svg>
+                        </div>
+                        <div class="delivery-form__item-var-caption">Будет готово через 30-35 минут</div>
+                      </div>
+                      <div class="delivery-form__group">
+                        <div class="delivery-form__group-title">Комментарий к заказу</div>
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" placeholder="Введите комментарий.."></textarea>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="delivery-form__confirm">
+                      <input class="btn btn--main" type="submit" value="Подтвердить">
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="terms-of-delivery">
+                <h3 class="terms-of-delivery__title">Условия доставки</h3>
+                <div class="terms-of-delivery__map">
+                </div>
+              </div>
+              <div class="payment">
+                <h3 class="payment__title">Способ оплаты</h3>
+                <div class="payment__row">
+                  <div class="payment__item">
+                    <div class="payment__to-pay">
+                      <span class="payment__to-pay-title">К оплате</span>
+                      <span class="price">1600<span class="b-rub">₽</span></span>
+                    </div>
+                  </div>
+                  <div class="payment__separate"></div>
+                  <div class="payment__item">
+                    <div class="payment__bonus">
+                      <div class="payment__bonus-score">На счету <span>150 бонусов</span></div>
+                      <form action="" class="bonus-form">
+                        <label class="field-text bonus-form__field">
+                            <input class="field-text__input" type="num" value="70">
+                        </label>
+                        <input class="btn btn--main" type="submit" value="Списать в оплату">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="payment__row-separate"></div>
+                <div class="payment__row">
+                  <div class="payment__item">
+                    <div class="field-radio__input-wrap">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="demo-radio">
+                        <span class="field-radio__name-text">Наличными курьеру</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment__item">
+                    <div class="field-radio__input-wrap">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="demo-radio">
+                        <span class="field-radio__name-text">Картой курьеру</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment__item">
+                    <div class="field-radio__input-wrap">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="demo-radio">
+                        <span class="field-radio__name-text">Онлайн-оплата</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-checkout">
+                <form action="" class="order-checkout__form">
+                  <input class="btn btn--main" type="submit" value="Оформить заказ">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text">Я прочел и согласен с условиями заказа</span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="page__footer-wrap">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="footer-top-wrap">
+          <div class="page__container">
+            <div class="footer-top">
+              <div class="footer-top__logo">
+                <a href="index.html" class="logo">
+                  <img src="img/logo.png" alt="logo">
+                </a>
+              </div>
+              <div class="footer-top__cont">
+                <div class="footer-top__nav">
+                  <ul class="footer-nav">
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Полезно знать</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Фотоальбом</a></li>
+                    <li><a href="#">Заказ и доставка</a></li>
+                    <li><a href="#">Суши-бар</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Банкетный зал</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                  </ul>
+                </div>
+                <div class="footer-top__pay">
+                  <svg width="48" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pay-logo-visa"></use></svg>
+                  <svg width="117" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pay-logo-master"></use></svg>
+                  <svg width="54" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pay-logo-mir"></use></svg>
+                </div>
+                <a class="footer-top__pc-link" href="#">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-wrap">
+          <div class="page__container">
+            <div class="footer-bottom">
+              <div class="footer-bottom__copyright">© 2017 Суши-бар «Haki Sen Tey»</div>
+              <div class="footer-bottom__dev">Разработка - <a href="http://www.2showbiz.ru/">Showbiz Studio</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
