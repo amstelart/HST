@@ -5,7 +5,9 @@
 .c-card {
 
   $block-name:                &; // #{$block-name}__element
+
   &__body {
+    border: 1px solid transparent;
     background: #fff;
   }
   &__header {
@@ -49,11 +51,24 @@
       box-shadow: inset 1px -60px 47px -20px rgba(255,255,255,1);
     }
   }
-  &__caption:hover {
-    overflow: inherit;
-    &:after {
-      display: none;
+  &:hover {
+    #{$block-name}__body {
+      border-color: #000;
     }
+    #{$block-name}__caption {
+      overflow: inherit;
+    #{$block-name}__caption-text {
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+      &:after {
+        display: none;
+      }
+    }
+
   }
   &__caption-text {
     position: absolute;
