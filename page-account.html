@@ -4,42 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>NTH start project</title>
-  <meta name="description" content=""> <!--DEV Такой комментарий не попадет в собранный HTML
-<meta name="viewport" content="width=1000">
--->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="format-detection" content="telephone=no">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
-<link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
 
-<script>
-  // Маркер работающего javascript
-  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-  document.addEventListener('DOMContentLoaded', function(){
-    if (window.isMobile !== undefined) {
-      // console.log(isMobile);
-      if(isMobile.any) {
-        var rootClasses = ' is-mobile';
-        for (key in isMobile) {
-          if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
-          if(typeof isMobile[key] === 'object' && key !== 'other') {
-            for (type in isMobile[key]) {
-              if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
             }
           }
+          document.documentElement.className += rootClasses;
         }
-        document.documentElement.className += rootClasses;
       }
-    }
-    else {
-      console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
-    }
-  });
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
 
-</script>
+  </script>
 
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -169,104 +167,84 @@
       </header>
 
 
-      <div class="main-slider-wrap">
-        <div class="owl-carousel main-slider" id="main-slider">
-          <img src="img/slider-demo-image.jpg" alt="">
-          <img src="img/slider-demo-image.jpg" alt="">
-          <img src="img/slider-demo-image.jpg" alt="">
-        </div>
-      </div>
+      <!-- <main class="page__main" role="main">
+        <div class="page__container">
 
-      <section class="main-blocks">
-        <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div>
+        </div>
+
+      </main> -->
+
+      <section class="main-blocks main-blocks--wb">
+        <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
         <div class="layout">
-          <div class="layout__main">
-            <div class="main-catalog">
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-01.jpg);">
-                  <h4 class="main-catalog__card-name">Суши</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-02.jpg);">
-                  <h4 class="main-catalog__card-name">Роллы</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-03.jpg);">
-                  <h4 class="main-catalog__card-name">Сеты</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-04.jpg);">
-                  <h4 class="main-catalog__card-name">Рис</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-05.jpg);">
-                  <h4 class="main-catalog__card-name">Гункан</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-06.jpg);">
-                  <h4 class="main-catalog__card-name">Сашими</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-07.jpg);">
-                  <h4 class="main-catalog__card-name">Горячие закуски</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-08.jpg);">
-                  <h4 class="main-catalog__card-name">Салаты</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-09.jpg);">
-                  <h4 class="main-catalog__card-name">Супы</h4>
-                </a>
-              </div>
+          <div class="layout__fw">
+            <div class="page__title">
+              <h1 class="page__title-main">Личный кабинет</h1>
             </div>
-            <div class="partners">
-              <h3 class="partners__title">Нащи партнёры</h3>
-              <div class="owl-carousel partners__carousel" id="partners-carousel">
-                <div class="partners__carousel-item">
-                  <img src="img/partners-demo-img-01.jpg" width="230" height="110" alt="">
+            <div class="account">
+              <div class="account__parth account__parth--info">
+                <div class="account__parth-title">Личная информация:</div>
+                <div class="account__stat">
+                  <div class="account__stat-item">Количество бонусов: <span>150</span></div>
+                  <div class="account__stat-item">Количество заказов: <span>52</span></div>
                 </div>
-                <div class="partners__carousel-item">
-                  <img src="img/partners-demo-img-02.jpg" width="230" height="110" alt="">
+                <div class="account__info">
+                  <div class="account__info-item">Имя: <span>Андрей</span></div>
+                  <div class="account__info-item">Телефон: <span>+7-900-500-77-11</span></div>
+                  <div class="account__info-item"><a href="#">Изменить пароль</a></div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="layout__r-col">
-            <div class="banner">
-              <a href="#" class="banner__link">
-                <img src="img/banner-demo.jpg" alt="">
-              </a>
-            </div>
-            <div class="action">
-              <div class="action__header">
-                <h3 class="action__header-title">Акция</h3>
+              <div class="account__parth account__parth--delivery">
+                <div class="account__parth-title">Адреса доставки:</div>
+                <div class="account__delivery">
+                  <ul>
+                    <li class="account__delivery-item">Бойцоы 9-ой дивизии 100 <span class="close" aria-label="Закрыть"><span></span></span></li>
+                    <li class="account__delivery-item">Ленина 12, кв. 50 <span class="close" aria-label="Закрыть"><span></span></span></li>
+                    <li class="account__delivery-item">Уосухина 17, кв. 21 <span class="close" aria-label="Закрыть"><span></span></span></li>
+                  </ul>
+                  <div class="account__delivery-item"><a href="#">Добавить адрес</a></div>
+                </div>
               </div>
-              <div class="action__body">
-                <div class="action__card">
-                  <h2 class="action__card-name">Абокадо</h2>
-                  <div class="action__card-image">
-                    <img src="img/action-card-image.jpg" alt="">
+              <div class="account__parth account__parth--newsletters">
+                <div class="account__parth-title">Рассылки:</div>
+                <div class="account__newsletters">
+                  <div class="account__newsletters-item">
+
+                    <form action="">
+                      <div class="field-radio field-radio--newsletters">
+                        <div class="field-radio__title">Получать СМС рассылки:</div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" checked="checked" name="demo-radio">
+                            <span class="field-radio__name-text">Да</span>
+                          </label>
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="demo-radio">
+                            <span class="field-radio__name-text">Нет</span>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+
                   </div>
-                  <div class="action__card-buy">
-                    <span class="price price--old">251<span class="b-rub">&#8381;</span></span><span class="price price--red">50<span class="b-rub">&#8381;</span></span>
-                    <button class="btn btn--main">В корзину</button>
-                  </div>
-                </div>
-              </div>
-              <div class="action__footer">
-                <div class="action__counter">
-                  <p class="action__counter-caption">До окончания акции</p>
-                  <div class="action__counter-count">
-                    <span>25</span>:<span>11</span>
+                  <div class="account__newsletters-item">
+
+                    <form action="">
+                      <div class="field-radio field-radio--newsletters">
+                        <div class="field-radio__title">Получать E-mail рассылки:</div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="demo-radio" checked="checked">
+                            <span class="field-radio__name-text">Да</span>
+                          </label>
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="demo-radio">
+                            <span class="field-radio__name-text">Нет</span>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+
                   </div>
                 </div>
               </div>
@@ -329,5 +307,4 @@
   <script src="js/script.min.js"></script>
 
 </body>
-
 </html>

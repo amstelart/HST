@@ -4,42 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>NTH start project</title>
-  <meta name="description" content=""> <!--DEV Такой комментарий не попадет в собранный HTML
-<meta name="viewport" content="width=1000">
--->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="format-detection" content="telephone=no">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
-<link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
 
-<script>
-  // Маркер работающего javascript
-  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-  document.addEventListener('DOMContentLoaded', function(){
-    if (window.isMobile !== undefined) {
-      // console.log(isMobile);
-      if(isMobile.any) {
-        var rootClasses = ' is-mobile';
-        for (key in isMobile) {
-          if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
-          if(typeof isMobile[key] === 'object' && key !== 'other') {
-            for (type in isMobile[key]) {
-              if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
             }
           }
+          document.documentElement.className += rootClasses;
         }
-        document.documentElement.className += rootClasses;
       }
-    }
-    else {
-      console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
-    }
-  });
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
 
-</script>
+  </script>
 
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -169,107 +167,72 @@
       </header>
 
 
-      <div class="main-slider-wrap">
-        <div class="owl-carousel main-slider" id="main-slider">
-          <img src="img/slider-demo-image.jpg" alt="">
-          <img src="img/slider-demo-image.jpg" alt="">
-          <img src="img/slider-demo-image.jpg" alt="">
-        </div>
-      </div>
+      <!-- <main class="page__main" role="main">
+        <div class="page__container">
 
-      <section class="main-blocks">
-        <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div>
+        </div>
+
+      </main> -->
+
+      <section class="main-blocks main-blocks--wb">
+        <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
         <div class="layout">
-          <div class="layout__main">
-            <div class="main-catalog">
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-01.jpg);">
-                  <h4 class="main-catalog__card-name">Суши</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-02.jpg);">
-                  <h4 class="main-catalog__card-name">Роллы</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-03.jpg);">
-                  <h4 class="main-catalog__card-name">Сеты</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-04.jpg);">
-                  <h4 class="main-catalog__card-name">Рис</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-05.jpg);">
-                  <h4 class="main-catalog__card-name">Гункан</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-06.jpg);">
-                  <h4 class="main-catalog__card-name">Сашими</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-07.jpg);">
-                  <h4 class="main-catalog__card-name">Горячие закуски</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-08.jpg);">
-                  <h4 class="main-catalog__card-name">Салаты</h4>
-                </a>
-              </div>
-              <div class="main-catalog__card">
-                <a href="page-catalog.html" class="main-catalog__card-image" style="background-image: url(img/main-catalog-image-09.jpg);">
-                  <h4 class="main-catalog__card-name">Супы</h4>
-                </a>
-              </div>
+          <div class="layout__fw layout__fw--page-form">
+            <div class="page__title">
+              <h1 class="page__title-main">Регистрация</h1>
             </div>
-            <div class="partners">
-              <h3 class="partners__title">Нащи партнёры</h3>
-              <div class="owl-carousel partners__carousel" id="partners-carousel">
-                <div class="partners__carousel-item">
-                  <img src="img/partners-demo-img-01.jpg" width="230" height="110" alt="">
-                </div>
-                <div class="partners__carousel-item">
-                  <img src="img/partners-demo-img-02.jpg" width="230" height="110" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="layout__r-col">
-            <div class="banner">
-              <a href="#" class="banner__link">
-                <img src="img/banner-demo.jpg" alt="">
-              </a>
-            </div>
-            <div class="action">
-              <div class="action__header">
-                <h3 class="action__header-title">Акция</h3>
-              </div>
-              <div class="action__body">
-                <div class="action__card">
-                  <h2 class="action__card-name">Абокадо</h2>
-                  <div class="action__card-image">
-                    <img src="img/action-card-image.jpg" alt="">
+            <div class="authorization">
+              <form action="" class="form--authorization">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Имя">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Телефон">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="E-mail">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Улица">
+                  </span>
+                </label>
+                <div class="field-col-wrap">
+                  <div class="field-col-wrap__item">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Дом">
+                      </span>
+                    </label>
                   </div>
-                  <div class="action__card-buy">
-                    <span class="price price--old">251<span class="b-rub">&#8381;</span></span><span class="price price--red">50<span class="b-rub">&#8381;</span></span>
-                    <button class="btn btn--main">В корзину</button>
+                  <div class="field-col-wrap__item">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Кв/офис">
+                      </span>
+                    </label>
                   </div>
                 </div>
-              </div>
-              <div class="action__footer">
-                <div class="action__counter">
-                  <p class="action__counter-caption">До окончания акции</p>
-                  <div class="action__counter-count">
-                    <span>25</span>:<span>11</span>
-                  </div>
+                <div class="field-actions">
+                  <button type="submit" class="btn btn--main">Зарегистрироваться</button>
                 </div>
-              </div>
+                <div class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" checked>
+                    <span class="field-checkbox__name-text">Я согласен на обработку персональных данных</span>
+                  </label>
+                </div>
+                <div class="field-links">
+                  <span class="field-links__item" href="#">Уже зарегистрированы?</span>
+                  <a class="field-links__item" href="#">Войти</a>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -329,5 +292,4 @@
   <script src="js/script.min.js"></script>
 
 </body>
-
 </html>
