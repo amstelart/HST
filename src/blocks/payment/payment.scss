@@ -6,8 +6,10 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  margin: 0 100px 0 100px;
-  padding: 0 15px 40px 15px;
+  @media (min-width: $screen-xl) {
+    margin: 0 100px 0 100px;
+    padding: 0 15px 40px 15px;
+  }
 
   &__title {
     font-size: 36px;
@@ -19,9 +21,13 @@
 
   &__row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     padding: 35px 15px;
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__row-separate {
     height: 1px;
@@ -30,12 +36,19 @@
 
   &__item {
     padding: 0 60px;
+    flex-basis: 100%;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xl) {
+
+    }
   }
 
   &__separate {
-    width: 1px;
-    height: 80px;
-    background: #c0c0c0;
+    @media (min-width: $screen-xl) {
+      width: 1px;
+      height: 80px;
+      background: #c0c0c0;
+    }
   }
 
   &__to-pay {

@@ -19,10 +19,15 @@
     font-weight: 400;
   }
   &__details-person {
-    @include make-col(5);
+    @include make-col(12);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xl) {
+      @include make-col(5);
+      justify-content: flex-start;
+    }
     .elements-icr-block,
     .incr {
       width: 140px
@@ -34,7 +39,13 @@
     }
   }
   &__details-bonus {
-    @include make-col(3);
+    @include make-col(12);
+    text-align: center;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xl) {
+      @include make-col(3);
+      text-align: left;
+    }
     span {
       font-size: 24px;
       font-weight: 500;
@@ -43,6 +54,12 @@
     }
   }
   &__details-cost {
-    @include make-col(3);
+    @include make-col(12);
+    text-align: center;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xl) {
+      @include make-col(3);
+      text-align: left;
+    }
   }
 }

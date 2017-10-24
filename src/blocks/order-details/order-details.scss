@@ -7,11 +7,15 @@
   $block-name:                &; // #{$block-name}__element
 
   border-bottom: 1px solid #ccc;
-  margin: 0 100px 30px 100px;
+  margin-bottom: 30px;
+  @media (min-width: $screen-xl) {
+    margin: 0 100px 30px 100px;
+  }
 
   &__title {
     text-align: center;
     font-size: 36px;
+    line-height: 42px;
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 30px;

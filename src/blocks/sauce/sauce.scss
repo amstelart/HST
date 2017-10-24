@@ -19,7 +19,19 @@
   &__cards {
     @include row;
     .s-card {
-      @include make-col(2);
+      @include make-col(12);
+      @media (min-width: $screen-md) {
+        @include make-col(4);
+      }
+      @media (min-width: $screen-lg) {
+        @include make-col(3);
+      }
+      @media (min-width: $screen-xl) {
+        @include make-col(2);
+      }
+      &__image {
+        text-align: center;
+      }
     }
   }
 

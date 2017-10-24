@@ -10,6 +10,9 @@
     background: $color-main;
     margin-bottom: 0;
     border: none;
+    .page__separate {
+      display: none;
+    }
   }
 }
 
@@ -47,13 +50,14 @@
   // мобильный вид шапки
   @media (max-width: ($menu-desktop-width - 1)) {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 15px;
-    justify-content: space-between;
-    height: 80px;
+    position: relative;
+    height: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
     .main-nav-toggler {
-      flex: 0 0 40px;
+      position: absolute;
+      left: 0;
+      top: 15px;
       > span {
         background: #fff;
         &:before,
@@ -63,13 +67,12 @@
       }
     }
     &__logo {
-      flex-basis: auto;
+      margin: auto;
+      width: 130px;
+      margin-top: 7px;
       .logo {
-        height: 80px;
-        display: block;
         img {
-          width: 100%;
-          height: auto;
+          width: 160px;
         }
       }
     }
@@ -77,14 +80,20 @@
       display: none;
     }
     &__basket {
-      flex-basis: auto;
+      position: absolute;
+      right: 0;
+      top: 15px;
       .basket {
         width: auto;
-        padding: 10px;
-        border-radius: 50%;
-        border-color: #fff;
+        display: block;
+        width: 30px;
+        padding: 0;
+        min-width: inherit;
+        height: 30px;
+        border: none;
         .icon {
           fill: #fff;
+          margin: auto;
         }
         span {
           display: none;
