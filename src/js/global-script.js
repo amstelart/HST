@@ -19,8 +19,17 @@ $( document ).ready(function() {
   //toggle catalog filter
   $('.tags__item').click(function () {
     $(this).toggleClass('tags__item--active')
-  })
+  });
+
   //toggle catalog filter end
+  $('.delivery-form__item .delivery-form__item-var').click(function () {
+    $(".delivery-form__item").removeClass("delivery-form__item--active");
+    $(this).parent().toggleClass('delivery-form__item--active');
+  });
+
+  //toggle delivery-form
+
+  //toggle delivery-form end
 
   // toggler main blocks
   $('.btn-get').click(function () {

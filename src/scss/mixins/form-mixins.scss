@@ -1,6 +1,6 @@
 @mixin field-help-text {
   $text-color--muted:         hsl(0, 0%, 50%) !default;
-  $font-size--small:          0.75em !default;
+  $font-size--small:          0.8em;
 
   display: block;
   padding-top: 0.4em;

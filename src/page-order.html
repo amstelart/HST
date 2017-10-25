@@ -34,14 +34,101 @@
 
     <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
-
-      <!-- <main class="page__main" role="main">
+      <header class="page-header-wrap" role="banner">
         <div class="page__container">
-
+          <div class="page-header">
+            <a class="burger main-nav-toggler" href="#menu"><span></span></a>
+            <div class="page-header__logo">
+              <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="logo">
+              </a>
+            </div>
+            <div class="page-header__info">
+              <div class="header-info">
+                <p class="header-info__phone">
+                  <svg width="22" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-phone"></use></svg>
+                  <span>22-22-12</span>
+                </p>
+                <p class="header-info__text">Вы можете сделать заказ по телефону</p>
+              </div>
+            </div>
+            <div class="page-header__auth">
+              <div class="page-header__auth-el">Вход</div>
+              <div class="page-header__auth-divider"></div>
+              <div class="page-header__auth-el">Регистрация</div>
+            </div>
+            <div class="page-header__basket">
+              <a href="page-order.html" class="basket basket--active">
+                <span>2 поз. / 1580 р.</span>
+                <svg class="icon" width="30" height="27"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"></use></svg>
+              </a>
+            </div>
+            <div class="page-header__social">
+              <div class="social">
+                <a class="social__item social__item--vk" href="#"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-social-vk"></use></svg></a>
+                <a class="social__item social__item--insta" href="#"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-social-insta"></use></svg></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-      </main> -->
+        <div class="page__separate"></div>
+        <nav class="main-nav" role="navigation">
+          <div class="page__container">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Японское Меню
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Бизнес-ланч
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Фитнес-меню
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Пицца
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  О нас
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Фотоальбом
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Заказ и доставка
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Отзывы
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Банкетное меню
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
       <section class="main-blocks main-blocks--wb">
         <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
@@ -616,7 +703,7 @@
               <div class="order-details__title">Контактная информация</div>
               <form action="" class="delivery-form">
                 <div class="delivery-form__row">
-                  <div class="delivery-form__col">
+                  <div class="delivery-form__col delivery-form__col--left">
                     <div class="delivery-form__item delivery-form__item--active">
                       <div class="delivery-form__item-var">Доставка курьером
                         <svg class="icon">
@@ -626,42 +713,39 @@
                       <div class="delivery-form__wrap">
                         <div class="delivery-form__group">
                           <div class="delivery-form__group-title">Данные доставки</div>
-                          <label class="field-select">
-                            <div class="field-select__name">Новый адрес</div>
-                            <div class="field-select__select-wrap">
-                              <select class="field-select__select">
-                                <optgroup label="Группа">
-                                  <option>Значение 1</option>
-                                  <option>Значение 2</option>
-                                  <option>Значение 3</option>
-                                </optgroup>
-                                <option>Значение 10</option>
-                              </select>
-                              <!-- <small class="field-select__help-text">Обёртка — <code>&lt;label&gt;</code>.</small> -->
-                            </div>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="Имя">
+                            </span>
                           </label>
                           <label class="field-text">
-                            <!-- <span class="field-text__name">Улица</span> -->
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="tel" placeholder="Телефон">
+                            </span>
+                          </label>
+                          <label class="field-text">
                             <span class="field-text__input-wrap">
                               <input class="field-text__input" type="text" placeholder="Улица">
-                              <!-- <span class="field-text__help-text">Пояснение</span> -->
                             </span>
                           </label>
-                          <label class="field-text">
-                            <!-- <span class="field-text__name">Дом</span> -->
-                            <span class="field-text__input-wrap">
-                              <input class="field-text__input" type="text" placeholder="Дом">
-                              <!-- <span class="field-text__help-text">Пояснение</span> -->
-                            </span>
-                          </label>
-                          <label class="field-text">
-                            <!-- <span class="field-text__name">Кв/офис</span> -->
-                            <span class="field-text__input-wrap">
-                              <input class="field-text__input" type="text" placeholder="Кв/офис">
-                              <!-- <span class="field-text__help-text">Пояснение</span> -->
-                            </span>
-                          </label>
+                          <div class="field-col-wrap">
+                            <div class="field-col-wrap__item">
+                              <label class="field-text">
+                                <span class="field-text__input-wrap">
+                                  <input class="field-text__input" type="text" placeholder="Дом">
+                                </span>
+                              </label>
+                            </div>
+                            <div class="field-col-wrap__item">
+                              <label class="field-text">
+                                <span class="field-text__input-wrap">
+                                  <input class="field-text__input" type="text" placeholder="Кв/офис">
+                                </span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
+                        <div class="delivery-form__separate"></div>
                         <div class="delivery-form__group">
                           <div class="delivery-form__group-title">Время доставки</div>
                           <div class="field-radio">
@@ -689,33 +773,35 @@
                       </div>
                     </div>
                   </div>
-                  <div class="delivery-form__col">
+                  <div class="delivery-form__col delivery-form__col--right">
                     <div class="delivery-form__item">
                       <div class="delivery-form__item-var">Заберу заказ сам
                         <svg class="icon">
                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-chek"></use>
                         </svg>
                       </div>
-                      <div class="delivery-form__item-var-caption">Будет готово через 30-35 минут</div>
-                      <div class="delivery-form__group">
-                        <div class="delivery-form__group-title">Данные доставки</div>
-                        <label class="field-text">
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="Дом">
-                          </span>
-                        </label>
-                        <label class="field-text">
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="Кв/офис">
-                          </span>
-                        </label>
+                      <div class="delivery-form__wrap">
+                        <div class="delivery-form__time">Будет готово через 30-35 минут</div>
+                        <div class="delivery-form__group">
+                          <div class="delivery-form__group-title">Данные доставки</div>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="Имя">
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="Телефон">
+                            </span>
+                          </label>
+                        </div>
                       </div>
                     </div>
-                    <div class="delivery-form__group">
+                    <div class="delivery-form__group delivery-form__group--textarea">
                       <div class="delivery-form__group-title">Комментарий к заказу</div>
                       <label class="field-text">
                         <span class="field-text__input-wrap">
-                          <textarea class="field-text__input" placeholder="Введите комментарий.."></textarea>
+                          <textarea style="min-height:180px;" class="field-text__input" placeholder="Введите комментарий.."></textarea>
                         </span>
                       </label>
                     </div>
@@ -759,9 +845,17 @@
                 <div class="payment__item">
                   <div class="field-radio__input-wrap">
                     <label class="field-radio__name">
-                      <input class="field-radio__input" type="radio" name="demo-radio">
+                      <input class="field-radio__input" type="radio" name="demo-radio" checked>
                       <span class="field-radio__name-text">Наличными курьеру</span>
                     </label>
+                    <div class="field-radio__sub-input-wrap">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="num" value="1000">
+                          <span class="field-text__help-text">Нужная сдача</span>
+                        </span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="payment__item">
