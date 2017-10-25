@@ -747,7 +747,7 @@
               <div class="order-details__title">Контактная информация</div>
               <form action="" class="delivery-form">
                 <div class="delivery-form__row">
-                  <div class="delivery-form__col">
+                  <div class="delivery-form__col delivery-form__col--left">
                     <div class="delivery-form__item delivery-form__item--active">
                       <div class="delivery-form__item-var">Доставка курьером
                         <svg class="icon">
@@ -758,41 +758,39 @@
                         <div class="delivery-form__group">
                           <div class="delivery-form__group-title">Данные доставки</div>
                           <label class="field-select">
-                            <div class="field-select__name">Новый адрес</div>
                             <div class="field-select__select-wrap">
                               <select class="field-select__select">
                                 <optgroup label="Группа">
-                                  <option>Значение 1</option>
+                                  <option>Выберите адрес</option>
                                   <option>Значение 2</option>
                                   <option>Значение 3</option>
                                 </optgroup>
-                                <option>Значение 10</option>
                               </select>
-                              <!-- <small class="field-select__help-text">Обёртка — <code>&lt;label&gt;</code>.</small> -->
                             </div>
                           </label>
                           <label class="field-text">
-                            <!-- <span class="field-text__name">Улица</span> -->
                             <span class="field-text__input-wrap">
                               <input class="field-text__input" type="text" placeholder="Улица">
-                              <!-- <span class="field-text__help-text">Пояснение</span> -->
                             </span>
                           </label>
-                          <label class="field-text">
-                            <!-- <span class="field-text__name">Дом</span> -->
-                            <span class="field-text__input-wrap">
-                              <input class="field-text__input" type="text" placeholder="Дом">
-                              <!-- <span class="field-text__help-text">Пояснение</span> -->
-                            </span>
-                          </label>
-                          <label class="field-text">
-                            <!-- <span class="field-text__name">Кв/офис</span> -->
-                            <span class="field-text__input-wrap">
-                              <input class="field-text__input" type="text" placeholder="Кв/офис">
-                              <!-- <span class="field-text__help-text">Пояснение</span> -->
-                            </span>
-                          </label>
+                          <div class="field-col-wrap">
+                            <div class="field-col-wrap__item">
+                              <label class="field-text">
+                                <span class="field-text__input-wrap">
+                                  <input class="field-text__input" type="text" placeholder="Дом">
+                                </span>
+                              </label>
+                            </div>
+                            <div class="field-col-wrap__item">
+                              <label class="field-text">
+                                <span class="field-text__input-wrap">
+                                  <input class="field-text__input" type="text" placeholder="Кв/офис">
+                                </span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
+                        <div class="delivery-form__separate"></div>
                         <div class="delivery-form__group">
                           <div class="delivery-form__group-title">Время доставки</div>
                           <div class="field-radio">
@@ -820,7 +818,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="delivery-form__col">
+                  <div class="delivery-form__col delivery-form__col--right">
                     <div class="delivery-form__item">
                       <div class="delivery-form__item-var">Заберу заказ сам
                         <svg class="icon">
@@ -829,11 +827,11 @@
                       </div>
                       <div class="delivery-form__item-var-caption">Будет готово через 30-35 минут</div>
                     </div>
-                    <div class="delivery-form__group">
+                    <div class="delivery-form__group delivery-form__group--textarea">
                       <div class="delivery-form__group-title">Комментарий к заказу</div>
                       <label class="field-text">
                         <span class="field-text__input-wrap">
-                          <textarea style="min-height: 375px;" class="field-text__input" placeholder="Введите комментарий.."></textarea>
+                          <textarea style="min-height: 325px;" class="field-text__input" placeholder="Введите комментарий.."></textarea>
                         </span>
                       </label>
                     </div>
@@ -877,9 +875,17 @@
                 <div class="payment__item">
                   <div class="field-radio__input-wrap">
                     <label class="field-radio__name">
-                      <input class="field-radio__input" type="radio" name="demo-radio">
+                      <input class="field-radio__input" type="radio" name="demo-radio" checked>
                       <span class="field-radio__name-text">Наличными курьеру</span>
                     </label>
+                    <div class="field-radio__sub-input-wrap">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="num" value="1000">
+                          <span class="field-text__help-text">Нужная сдача</span>
+                        </span>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="payment__item">
