@@ -100,11 +100,11 @@
     &:not(:last-child) {
       margin-bottom: 25px;
     }
-    &--textarea {
-      padding-right: 0;
-    }
     @media (min-width: $screen-md) {
       padding-right: 170px;
+      &--textarea {
+        padding-right: 0;
+      }
     }
   }
   &__group-title {

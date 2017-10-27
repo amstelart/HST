@@ -32,7 +32,7 @@
       height: 100%;
     }
   }
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-xl) {
     &__main {
       @include make-col(9);
     }
