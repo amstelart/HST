@@ -11,56 +11,62 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  .owl-prev,
-  .owl-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    font-size: 0;
-    color: transparent;
-    overflow: hidden;
-    transition: opacity $transition-time;
-    &:hover {
+  .owl-nav {
+
+    .owl-prev,
+    .owl-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      font-size: 0;
+      background: transparent;
+      color: transparent;
+      overflow: hidden;
+      transition: opacity $transition-time;
+      &:hover {
+        background: transparent;
+        &:before {
+          border-color: $color-main;
+        }
+      }
       &:before {
-        border-color: $color-main;
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        border-right: 3px solid #2c2c2c;
+        border-bottom: 3px solid #2c2c2c;
+      }
+    }
+    .owl-prev {
+      left: 20px;
+      @media (min-width: $screen-xxl) {
+        left: -45px;
+      }
+      &:before {
+        transform: translateX(5px) rotate(135deg);
       }
     }
 
-    &:before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 32px;
-      border-right: 3px solid #2c2c2c;
-      border-bottom: 3px solid #2c2c2c;
+    .owl-next {
+      right: 20px;
+      @media (min-width: $screen-xxl) {
+        right: -45px;
+      }
+
+      &:before {
+        transform: translateX(-5px) rotate(-45deg);
+      }
     }
   }
 
-  .owl-prev {
-    left: 20px;
-    @media (min-width: $screen-xxl) {
-      left: -45px;
-    }
-    &:before {
-      transform: translateX(5px) rotate(135deg);
-    }
-  }
 
-  .owl-next {
-    right: 20px;
-    @media (min-width: $screen-xxl) {
-      right: -45px;
-    }
 
-    &:before {
-      transform: translateX(-5px) rotate(-45deg);
-    }
-  }
 
   .disabled {
     opacity: 0;
