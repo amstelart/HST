@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class="page__inner" id="page">
+
+    <nav id="menu">
+      <ul>
+        <li><a href="page-account.html">Пункт меню</a></li>
+        <li><span>Меню</span>
+          <ul>
+            <li><a href="#about/history">Пункт меню</a></li>
+            <li><span>Пункт меню</span>
+              <ul>
+                <li><a href="#about/team/management">Пункт меню</a></li>
+                <li><a href="#about/team/sales">Пункт меню</a></li>
+                <li><a href="#about/team/development">Пункт меню</a></li>
+              </ul>
+            </li>
+            <li><a href="#about/address">Пункт меню</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Пункт меню</a></li>
+      </ul>
+    </nav>
+
+    <div class="page__content">
+
+      <header class="page-header-wrap" role="banner">
+        <div class="page__container">
+          <div class="page-header">
+            <a class="burger main-nav-toggler" href="#menu"><span></span></a>
+            <div class="page-header__logo">
+              <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="logo">
+              </a>
+            </div>
+            <div class="page-header__info">
+              <div class="header-info">
+                <p class="header-info__phone">
+                  <svg width="22" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-phone"></use></svg>
+                  <span>22-22-12</span>
+                </p>
+                <p class="header-info__text">Вы можете сделать заказ по телефону</p>
+              </div>
+            </div>
+            <div class="page-header__auth page-header__auth--logged">
+              <!-- <div class="page-header__auth-el">Вход</div>
+              <div class="page-header__auth-divider"></div>
+              <div class="page-header__auth-el">Регистраци</div> -->
+              <div class="page-header__auth-el">Здравствуйте, <span>Николай!</span></div>
+              <div class="page-header__auth-divider"></div>
+              <div class="page-header__auth-el"><a href="page-account.html">Личный кабинет</a></div>
+            </div>
+            <div class="page-header__basket">
+              <a href="page-order.html" class="basket basket--active">
+                <span>2 поз. / 1580 р.</span>
+                <svg class="icon" width="30" height="27"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"></use></svg>
+              </a>
+            </div>
+            <div class="page-header__social">
+              <div class="social">
+                <a class="social__item social__item--vk" href="#"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-social-vk"></use></svg></a>
+                <a class="social__item social__item--insta" href="#"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-social-insta"></use></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__separate"></div>
+        <nav class="main-nav" role="navigation">
+          <div class="page__container">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Японское Меню
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Бизнес-ланч
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Фитнес-меню
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Пицца
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  О нас
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Фотоальбом
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Заказ и доставка
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Отзывы
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Банкетное меню
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+      <!-- <main class="page__main" role="main">
+        <div class="page__container">
+
+        </div>
+
+      </main> -->
+
+      <section class="main-blocks main-blocks--wb">
+        <!-- <div class="bl-promo" style="background-image: url(img/bl-promo-image.jpg);"></div> -->
+        <div class="layout">
+          <div class="layout__fw">
+            <div class="page__title">
+              <h1 class="page__title-main">О нас</h1>
+            </div>
+            <p>Внезапно, активно развивающиеся страны третьего мира объединены в целые кластеры себе подобных. А также сторонники тоталитаризма в науке рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Являясь всего лишь частью общей картины, явные признаки победы институциализации представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны с неуникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. А еще сторонники тоталитаризма в науке неоднозначны и будут функционально разнесены на независимые элементы. Являясь всего лишь частью общей картины, явные признаки победы институциализации представлены в исключительно положительном свете. А также явные признаки победы институциализации могут быть смешаны с неуникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Лишь сделанные на базе интернет-аналитики выводы функционально разнесены на независимые элементы.</p>
+            <div class="owl-carousel" id="about-gellery">
+              <div class="gallery-item">
+                <a href="" class="gallery-link" style="background-image: url('https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/p320x320/22500165_1055985474504131_7936501999913140224_n.jpg');">
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="" class="gallery-link" style="background-image: url('https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/p320x320/22500165_1055985474504131_7936501999913140224_n.jpg');">
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="" class="gallery-link" style="background-image: url('https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/p320x320/22500165_1055985474504131_7936501999913140224_n.jpg');">
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="" class="gallery-link" style="background-image: url('https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/p320x320/22500165_1055985474504131_7936501999913140224_n.jpg');">
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="" class="gallery-link" style="background-image: url('https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/p320x320/22500165_1055985474504131_7936501999913140224_n.jpg');">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="page__footer-wrap">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="footer-top-wrap">
+          <div class="page__container">
+            <div class="footer-top">
+              <div class="footer-top__logo">
+                <a href="index.html" class="logo">
+                  <img src="img/logo.png" alt="logo">
+                </a>
+              </div>
+              <div class="footer-top__cont">
+                <div class="footer-top__nav">
+                  <ul class="footer-nav">
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Полезно знать</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Фотоальбом</a></li>
+                    <li><a href="#">Заказ и доставка</a></li>
+                    <li><a href="#">Суши-бар</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Банкетный зал</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                  </ul>
+                </div>
+                <div class="footer-top__pay">
+                  <svg width="48" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pay-logo-visa"></use></svg>
+                  <svg width="117" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pay-logo-master"></use></svg>
+                  <svg width="54" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pay-logo-mir"></use></svg>
+                </div>
+                <a class="footer-top__pc-link" href="#">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-wrap">
+          <div class="page__container">
+            <div class="footer-bottom">
+              <div class="footer-bottom__copyright">© 2017 Суши-бар «Haki Sen Tey»</div>
+              <div class="footer-bottom__dev">Разработка - <a href="http://www.2showbiz.ru/">Showbiz Studio</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
